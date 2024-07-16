@@ -9,25 +9,25 @@ Output: 6
 """
 # 0,1,1,2,3,5,8,13
 
-a = 5
-fibo_p, fibo_n = 0, 1
-position = 2 # переменная счетчик
-while fibo_n < a:
-    fibo_p, fibo_n = fibo_n, fibo_p + fibo_n
+a = 5 # необходимо найти пятое по счету число фебоначи
+fibo_p, fibo_n = 0, 1 # начинаем с первых чисел списка фебоначи. присваиваие через кортеж
+position = 2 # переменная счетчик начинаеться с 2 так как считать мы начнем с индекса 2
+while fibo_n < a: # пока фибо_н меньше переменной а
+    fibo_p, fibo_n = fibo_n, fibo_p + fibo_n # каждая следующая сумма двух предьидущих
     position += 1 #шаг счетчика +1
-if fibo_n == a:
-    print(position)
+if fibo_n == a: # фибо_н равен переменной а 
+    print(position) # выводим переменную позиция на экран
 else:
     print(-1)  # принт это функция
 
-def func(a=5, fibo_p=0, fibo_n=1, position=2):
-    if fibo_n == a:
-        return position
-    elif fibo_n < a:
-        return func(a, fibo_n, fibo_p + fibo_n, position+1)
-    else:
+def func(a=5, fibo_p=0, fibo_n=1, position=2): # Создаем функцию фанк и вводим переменные 
+    if fibo_n == a: # если фибо_н равно переменной а
+        return position # базовый случай для прекращщения рекурсии
+    elif fibo_n < a: # иначе_если фибо_н меньше переменной а
+        return func(a, fibo_n, fibo_p + fibo_n, position+1) # запускаем рекурсию в скобках вводим необходимые переменные
+    else: # иначе выводим на экран -1 (так как это условие прописанное в задаче )
         return -1
 
-print(func())    
+print(func())  # запускаем функцию с рекурсией  
 
 

@@ -7,26 +7,26 @@
  Здесь каждое число – это масса соответствующего арбуза
  Input: 5 -> 5 1 6 5 9 Output: 1 9"""
 
-data = [5, 1, 6, 5, 9]
-max_l = data[0]
-min_l = data[0]
-for elem in data:
-    if elem > max_l:
-        max_l = elem
-    if elem < min_l:
-        min_l = elem  
-print(max_l)
-print(min_l)  
+data = [5, 1, 6, 5, 9] # задали массив арбузов
+max_l = data[0] # переменная самого тяжелолго арбуза
+min_l = data[0] # переменная самого лёгкого арбуза
+for elem in data: # пробегаемся циклом по всем элементам массива
+    if elem > max_l: # если переменная элем больше чем переменная макс
+        max_l = elem # макс присваиваем значение переменной элем
+    if elem < min_l: #
+        min_l = elem  #
+print(max_l)  # выводим на экран самый тяжелый и легкий 
+print(min_l)  #
 
-
-def func(data, max_l=data[0], min_l=data[0]):
-    if len(data) == 0:
-        return max_l, min_l
-    if data[0] > max_l:
-        max_l = data[0]
+# рекурсия
+def func(data, max_l=data[0], min_l=data[0]): # создали функцию передали значения массива и переменных макс и мин
+    if len(data) == 0: # если длинна массива дата равна 0 
+        return max_l, min_l # базовый случай для выхода из рекурсии
+    if data[0] > max_l: # вместо переменной элем берем первый элемент массива с индексом 0
+        max_l = data[0] # за счет рекурсии масси будет уменьшать каждый виток на один элемент.
     if data[0] < min_l:
         min_l = data[0]      
         
-    return func(data[1:],max_l, min_l )
+    return func(data[1:],max_l, min_l )# запускаем рекурсию начиная с 1 индекса элемента
 
 print(func(data))
