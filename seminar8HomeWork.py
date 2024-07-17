@@ -14,7 +14,7 @@ class NameError(Exception):
         self.txt = txt
 
 
-def get_data():
+def get_data():  # создали функцию для ввода данных пользователя 
     flag = False
     while not flag:
         try:     
@@ -34,37 +34,36 @@ def get_data():
     return [first_name, last_name, phone]
 
 
-def create_file(filename):
+def create_file(filename):#
     with open(filename, 'w', encoding='utf-8') as data:
         f_w = DictWriter(data, fieldnames=['Имя', 'Фамилия', 'Телефон'])
         f_w.writeheader()
 
 
-def read_file(filename):
+def read_file(filename):#
     with open(filename, 'r', encoding='utf-8') as data:
         f_r = DictReader(data)
         return list(f_r)
 
 
-def write_file(filename, lst):
+def write_file(filename, lst):#
     res = read_file(filename)
     obj = {'Имя': lst[0], 'Фамилия': lst[1], 'Телефон': lst[2]}
     res.append(obj)
     standart_write(filename, res)
 
-def copy_file(src_filename, dest_filename):
+def copy_file(s_filename, d_filename):# функция для копирования строки и переноса его в другой файл
     row_number = int(input("Введите номер строки: "))
-    res = read_file(src_filename)
+    res = read_file(s_filename)
     row = res[row_number - 1]
-    if not exists(dest_filename):
-        create_file(dest_filename)
-
-    dest_data = read_file(dest_filename)
-    dest_data.append(row)
-    standart_write(dest_filename, dest_data)    
+    if not exists(d_filename):
+        create_file(d_filename)
+    d_data = read_file(d_filename)
+    d_data.append(row)
+    standart_write(d_filename, d_data)    
    
 
-def row_search(filename):
+def row_search(filename):# поиск данных по фамилии
     last_name = input("Введите фамилию")
     res = read_file(filename)
     for row in res:
@@ -80,9 +79,9 @@ def standart_write(filename, res):
         f_w.writeheader()
         f_w.writerows(res)
 
-def change_row(filename):
-    row_number = int(input("Введите номер строки"))
-    res = read_file(filename)
+def change_row(filename):# функция поиска необходимых данных с помощью ввода строки
+    row_number = int(input("Введите номер строки")) #запрос на ввод данных строки
+    res = read_file(filename) # проверяем есть ли такая строка в файле
     data = get_data()
     res[row_number-1]["Имя"] = data[0]
     res[row_number-1]["Фамилия"] = data[1]
@@ -92,10 +91,10 @@ def change_row(filename):
 
 
 
-filename = 'phone.csv' 
-filename2 = 'new_phone.csv'
+filename = 'phone.csv' # исходный файл
+filename2 = 'new_phone.csv'# файл для копирования 
 
-def main():
+def main():# с помощью функции main мы сможем вводить команды и вызывать необходимые нам функции .
     while True:
         command = input("Введите команду: ")
         if command == "q":
