@@ -8,7 +8,7 @@ Adelie,Torgersen,39.3,20.6,190.0,3650.0,MALE,middle
 Adelie,Torgersen,38.9,17.8,181.0,3625.0,FEMALE,middle
 Adelie,Torgersen,39.2,19.6,195.0,4675.0,MALE,middle
 Adelie,Torgersen,34.1,18.1,193.0,3475.0,,low
-Adelie,Torgersen,42.0,20.2,190.0,4250.0,,
+Adelie,Torgersen,42.0,20.2,190.0,4250.0,,middle
 Adelie,Torgersen,37.8,17.1,186.0,3300.0,,middle
 Adelie,Torgersen,37.8,17.3,180.0,3700.0,,middle
 Adelie,Torgersen,41.1,17.6,182.0,3200.0,FEMALE,middle
@@ -51,8 +51,8 @@ Adelie,Dream,36.0,17.9,190.0,3450.0,FEMALE,middle
 Adelie,Dream,42.3,21.2,191.0,4150.0,MALE,high
 Adelie,Biscoe,39.6,17.7,186.0,3500.0,FEMALE,middle
 Adelie,Biscoe,40.1,18.9,188.0,4300.0,MALE,middle
-Adelie,Biscoe,35.0,17.9,190.0,3450.0,FEMALE,
-Adelie,Biscoe,42.0,19.5,200.0,4050.0,MALE,
+Adelie,Biscoe,35.0,17.9,190.0,3450.0,FEMALE,middle
+Adelie,Biscoe,42.0,19.5,200.0,4050.0,MALE,middle
 Adelie,Biscoe,34.5,18.1,187.0,2900.0,FEMALE,low
 Adelie,Biscoe,41.4,18.6,191.0,3700.0,MALE,middle
 Adelie,Biscoe,39.0,17.5,186.0,3550.0,FEMALE,middle
@@ -99,7 +99,7 @@ Adelie,Dream,38.1,18.6,190.0,3700.0,FEMALE,middle
 Adelie,Dream,40.3,18.5,196.0,4350.0,MALE,middle
 Adelie,Dream,33.1,16.1,178.0,2900.0,FEMALE,low
 Adelie,Dream,43.2,18.5,192.0,4100.0,MALE,high
-Adelie,Biscoe,35.0,17.9,192.0,3725.0,FEMALE,
+Adelie,Biscoe,35.0,17.9,192.0,3725.0,FEMALE,middle
 Adelie,Biscoe,41.0,20.0,203.0,4725.0,MALE,middle
 Adelie,Biscoe,37.7,16.0,183.0,3075.0,FEMALE,middle
 Adelie,Biscoe,37.8,20.0,190.0,4250.0,MALE,middle
@@ -235,7 +235,7 @@ Gentoo,Biscoe,45.5,13.7,214.0,4650.0,FEMALE,high
 Gentoo,Biscoe,48.4,14.6,213.0,5850.0,MALE,high
 Gentoo,Biscoe,45.8,14.6,210.0,4200.0,FEMALE,high
 Gentoo,Biscoe,49.3,15.7,217.0,5850.0,MALE,high
-Gentoo,Biscoe,42.0,13.5,210.0,4150.0,FEMALE,
+Gentoo,Biscoe,42.0,13.5,210.0,4150.0,FEMALE,middle
 Gentoo,Biscoe,49.2,15.2,221.0,6300.0,MALE,high
 Gentoo,Biscoe,46.2,14.5,209.0,4800.0,FEMALE,high
 Gentoo,Biscoe,48.7,15.1,222.0,5350.0,MALE,high
